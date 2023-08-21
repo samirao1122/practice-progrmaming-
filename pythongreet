@@ -1,0 +1,11 @@
+def disp(y):
+    def greet():
+        return "greet function"
+    
+    print("disp function")
+    b = greet()
+    print(b)
+    return "disp function execution complete"
+
+a = disp("hello")
+print(a)
