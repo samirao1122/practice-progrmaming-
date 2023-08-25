@@ -1,1 +1,38 @@
+#include <iostream>
+#include <stdio.h>
+using namespace std;
+int main()
+{ int a;
+  a=0;
+  int b;
+  b=2;
+ 
+  cout<<a+b<<endl;
+    
+return 0;
 
+}
+#include <iostream>
+
+#include <stdio.h>
+using namespace std;
+
+int main()
+
+{
+  cout<<"hello sami/n"<<endl;
+  return 0;
+}
+int str_roll(int y);
+int main () 
+{
+str_roll(3);
+ return 0;
+}
+
+int str_roll(int y){
+ int x;
+ x=3824219217;
+  cout<<"long:"<<x<<endl;
+ return 0;
+}
