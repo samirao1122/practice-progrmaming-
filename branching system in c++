@@ -10,7 +10,7 @@ if (marks >0 && marks <20){
 else{
   cout<<"not eligible ";
 }
-
+...................list with pointer...............
 #include <iostream>
 using namespace std;
 struct node{
