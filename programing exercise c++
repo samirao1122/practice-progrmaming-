@@ -67,3 +67,82 @@ break;
 cout<<"Alhamdulilah after 1 hour program finished.....Made by sami.....";
     return 0;
 }
+...............................................................................................................................
+//question 6;;;
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+int main() {
+int num,even_sum,odd_sum;
+while (true)
+{
+    cout<<"enter a number "<<endl;
+ cin>>num;
+    cout<<"your number is :"<<num<<endl;
+    if (num==0)
+    {break;}
+    if (num%2==0){
+       cout<<"number is   even"<<endl; 
+        even_sum+=num;
+        
+        
+    }
+
+    
+    else{
+        cout<<"number is odd"<<endl;
+        odd_sum+=num;
+    }
+}
+cout<<"sum of all the even number is :"<<even_sum<<endl;
+cout<<"sum of all the odd number is :"<<odd_sum<<endl;
+    return 0;
+}
+................................................................................................................................
+//question no 4
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    char letter;
+
+
+    cout << "Enter a letter: ";
+    cin >> letter;
+
+
+    int digit;
+    switch (letter) {
+        case 'A':
+        case 'B':
+        case 'C':
+        case 'a':
+        case 'b':
+        case 'c':
+            digit = 2;
+            break;
+        case 'D':
+        case 'E':
+        case 'F':
+        case 'd':
+        case 'e':
+        case 'f':
+            digit = 3;
+            break;
+
+        default:
+            if ((letter >= 'A' && letter <= 'Z') || (letter >= 'a' && letter <= 'z')) {
+                cout << "Invalid input. Please enter a letter." << endl;
+            } else {
+                cout << "Invalid input. The character entered is not a letter." << endl;
+            }
+
+    }
+
+    cout << "The digit corresponding to " << letter << " is: " << digit << endl;
+
+    return 0;
+}
+
