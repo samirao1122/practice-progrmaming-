@@ -1,4 +1,3 @@
-//question no 4
 
 #include <iostream>
 
@@ -30,7 +29,47 @@ int main() {
         case 'f':
             digit = 3;
             break;
-
+        case 'g':
+        case 'h':
+        case 'i':
+        case 'G':
+        case 'H':
+        case 'I':
+            digit = 4;
+        case 'j':
+        case 'k':
+        case 'l':
+        case 'M':
+        case 'N':
+        case 'O':
+            digit = 5;
+        case 'p':
+        case 'q':
+        case 'r':
+        case 'P':
+        case 'Q':
+        case 'R':
+            digit = 6;
+        case 's':
+        case 't':
+        case 'u':
+        case 'S':
+        case 'T':
+        case 'U':
+            digit = 7;
+        case 'V':
+        case 'W':
+        case 'X':
+        case 'v':
+        case 'w':
+        case 'x':
+            digit = 8;
+        case 'y':
+        case 'z':
+        case 'Y':
+        case 'Z':
+       
+            digit = 9;
         default:
             if ((letter >= 'A' && letter <= 'Z') || (letter >= 'a' && letter <= 'z')) {
                 cout << "Invalid input. Please enter a letter." << endl;
@@ -44,3 +83,5 @@ int main() {
 
     return 0;
 }
+
+ 
