@@ -1,0 +1,69 @@
+//question 9
+#include <iostream>
+using namespace std;
+
+int main() {
+    int integer1, integer2;
+    int num1, num2;
+    int sum_even;
+    int square_num = 1;  
+    int sumSquareOdd = 0;
+
+    cout << "Enter first integer: ";
+    cin >> integer1;
+    cout << "Enter the second integer: ";
+    cin >> integer2;
+
+    while (integer1 < integer2) {
+        cout << "Enter first num: ";
+        cin >> num1;
+        cout << "Enter the second num: ";
+        cin >> num2;
+        cout << "Odd num................" << endl;
+
+        if (num1 % 2 != 0) {
+            cout << "Odd num: " << num1 << endl;
+        } else {
+            num1++;
+            cout << "Odd number after increment: " << num1 << endl;
+        }
+
+        cout << "Sum of all even number .............." << endl;
+        sum_even = 0;
+
+        while (num1 < num2) {
+            int current_num1 = num1;
+            if (current_num1 % 2 == 0) {
+                sum_even += current_num1;
+            }
+            num1++;
+        }
+        cout << "Sum of all even number " << sum_even << endl;
+
+        cout << "Now square of number between 1 and 10........." << endl;
+        while (square_num <= 10) {
+            cout << "Square of " << square_num << ": " << square_num * square_num << endl;
+            square_num++;
+        }
+
+        cout << "Square of odd numbers" << endl;
+
+        while (num1 <= num2) {
+            int currentnum2 = num1;
+            if (currentnum2 % 2 != 0) {
+                sumSquareOdd += currentnum2 * currentnum2;
+            }
+            num1++;
+        }
+        cout << "Sum of the square of odd numbers " << sumSquareOdd << endl;
+break;
+        
+    }char letter='A';
+    while (letter<='Z'){
+        cout<<"letter......uppercase:"<<letter<<endl;
+        letter++;}
+       
+    cout<<endl;
+cout<<"Alhamdulilah after 1 hour program finished.....Made by sami.....";
+    return 0;
+}
