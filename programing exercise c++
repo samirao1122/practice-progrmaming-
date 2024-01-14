@@ -285,3 +285,32 @@ int main() {
     cout << "Alhamdulilah after 1 hour program finished.....Made by sami....." << endl;
     return 0;
 }
+....................................................................................................................................
+#include <iostream>
+#include <iomanip>
+using namespace std;
+int main()
+{
+char response;
+double num1;
+double num2;
+cout << "This program adds two numbers." << endl;
+cout << "Would you like to run the program: (Y/y) ";
+cin >> response;
+cout << endl;
+
+
+cout << fixed << showpoint << setprecision(2);
+while (response == 'Y' || response == 'y')
+{
+cout << "Enter two numbers: ";
+cin >> num1 >> num2;
+cout << endl;
+cout << num1 << " + " << num2 << " = " << (num1 - num2)
+<< endl;
+cout << "Would you like to add again: (Y/y) ";
+cin >> response;
+cout << endl;
+}
+return 0;
+}
