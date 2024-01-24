@@ -1,0 +1,138 @@
+#include <iostream>
+#include <bitset>
+#include <sstream>
+using namespace std;
+int binarytoDecimal(string x){
+int decimal= stoi(x,nullptr,2);
+cout<<"The decimal = "<<decimal<<endl;
+return decimal;
+}
+int octaltoDecimal(string x){
+int decimal= stoi(x,nullptr,8);
+cout<<"The decimal = "<<decimal<<endl;
+return decimal;
+}
+int hexatoDecimal(string x){
+int decimal= stoi(x,nullptr,16);
+cout<<"The decimal = "<<decimal<<endl;
+return decimal;
+}
+int decimaltoHexa(int x){
+cout<<"The hexadecimal = "<< hex << x<<endl;
+return x;
+}
+int decimaltoOctal(int x){
+cout<<"The Octal = "<< oct << x<<endl;
+return x;
+}
+int decimaltoBinary(int x){
+bitset<32> bin (x);
+cout<<"The Binary = " << bin << endl;
+return 0;
+}
+bool binarycheck( string y){
+ for (char c : y){
+ if (c!= '0' && c !='1'){
+ return false;
+ }
+ }
+ return true;
+}
+bool octalcheck(string y){
+ for (char c : y){
+ if (c< '0' || c > '7'){
+ return false;
+ }
+ }
+ return true;
+ }
+bool decimalcheck(string y){
+ for(char c: y){
+ if (c<'0' || c> '9'){
+ return false;
+ }
+ return true;
+ }
+}
+bool hexacheck(string y){
+ for (char c: y){
+ if (!isdigit(c) && !isupper(c)){
+ return false;
+ }
+ if (isupper(c) && (c < 'A' || c > 'F')){
+ return false;
+ }
+ }
+ return true;
+}
+int main(){
+ string y;
+int choice;
+cout<<"What you want to perform:"<<endl;
+cout<<"1.binary to decimal,octal,hexadecimal"<<endl;
+cout<<"2.octal to decimal,octal,hexadecimal"<<endl;
+cout<<"3.decimal to binary,octal,hexadecimal"<<endl;
+cout<<"4.hexadecimal to decimal,binary,octal"<<endl;
+cin>>choice;
+switch (choice){
+case 1:
+ cout<<"enter a binary number:";
+ cin>>y;
+ if(binarycheck(y)){
+ int a = binarytoDecimal(y);
+ decimaltoOctal(a);
+ decimaltoHexa(a);
+ }
+ else{
+ cout<<"You Entered a invalid binary Number"<<endl;
+ cout<<"binary Number range uses 0,1 only"<<endl;
+ }
+ break;
+case 2:
+ cout<<"Enter a Octal Number: ";
+ cin>>y;
+ if(octalcheck(y)){
+ int a= octaltoDecimal(y);
+ decimaltoBinary(a);
+ decimaltoHexa(a);
+ }
+ else {
+ cout<<"You Entered a invalid octal Number"<<endl;
+ cout<<"octal Number range uses 0,1,2,3,4,5,6,7"<<endl;
+ }
+ break;
+case 3:
+ cout<<"Enter a decimal Number ";
+ cin>>y;
+ if(decimalcheck(y)){
+ stringstream noshi(y);
+ int yy;
+ noshi>>yy;
+ decimaltoBinary(yy);
+ decimaltoOctal(yy);
+ decimaltoHexa(yy);
+ }
+ else {
+ cout<<"You Entered a invalid Decimal Number"<<endl;
+ cout<<"Decimal Number range uses 0,1,2,3,4,5,6,7,8,9"<<endl;
+ }
+ break;
+case 4:
+ cout<<"Enter a hexadecimal Number(Letters should be in capital:A,B,C,D,E,F: ";
+ cin>>y;
+ if(hexacheck(y)){
+ int a = hexatoDecimal(y);
+ decimaltoBinary(a);
+ decimaltoOctal(a);
+ }
+ else {
+ cout<<"You Entered a invalid hexadecimal Number"<<endl;
+ cout<<"hexadecimal Number range uses 0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F"<<endl;
+ }
+ break;
+default:
+ cout<<"Enter Valid choice between 1 and 12"<<endl;
+ break;
+ }
+return 0;
+}
