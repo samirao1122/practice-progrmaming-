@@ -1,0 +1,57 @@
+#include<iostream>
+using namespace std;
+
+string encryption(string message, int choice);
+string decryption(string message, int choice);
+
+int main() {
+    string inputMessage, code, encryptedMessage, senderpersonname, reciverpersonname;
+    cout << "enter the name of person who is sending the message in the form of cipher " << endl;
+    getline(cin, senderpersonname);
+    cout << "enter the name of reciever " << endl;
+    getline(cin, reciverpersonname);
+
+    cout << senderpersonname << " is sending the cipher to " << reciverpersonname << endl;
+    int choice;
+
+    cout << "Enter message: ";
+    getline(cin, inputMessage);
+    cout << "Enter some value by your own choice by which you can change the message into your cipher message " << endl;
+    cout << "Enter your choice: ";
+    cin >> choice;
+
+    encryptedMessage = encryption(inputMessage, choice);
+    cout << "Encrypted message: " << encryptedMessage << endl;
+    cout << "Cipher sending process........................." << endl;
+    cout << "Sending finished..............................." << endl;
+
+    cout << "..................................." << endl;
+    cout << "Case of receiver person" << endl;
+    cout << "Enter the code to open the cipher: ";
+    cin.ignore();
+    getline(cin, code);
+
+    if (code == "open.cipher") {
+        string decryptedMessage = decryption(encryptedMessage, choice);
+        cout << "Decrypted message: " << decryptedMessage << endl;
+    } else {
+        cout << "Invalid code" << endl;
+    }
+
+    cout << "Program finished" << endl;
+    return 0;
+}
+
+string encryption(string message, int choice) {
+    for (int i = 0; message[i] != '\0'; i++) {
+        message[i] = message[i] + choice;
+    }
+    return message;
+}
+
+string decryption(string message, int choice) {
+    for (int i = 0; message[i] != '\0'; i++) {
+        message[i] = message[i] - choice;
+    }
+    return message;
+}
