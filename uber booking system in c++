@@ -1,0 +1,71 @@
+#include <iostream> 
+#include <string>
+using namespace std;
+void FIREFLY(){
+ cout<<"FIREFLY UBER BOOKING SYSTEM"<<endl;
+ cout<<"1. Book an uber"<<endl;
+ cout<<"2. Check status"<<endl;
+ cout<<"3. Cancel an uber"<<endl;
+ cout<<"4. Exit"<<endl;
+ cout<<"Enter your choice: ";
+}
+void FIREFLY_booking(){
+ cout<<"Enter your destination"<<endl;
+ cout<< "1. Tradecenter"<<endl;
+ cout<< "2. Railway station"<<endl;
+ cout<< "3. Imtiaz shopping mall"<<endl;
+ cout<< "4. Bus station"<<endl;
+ cout<< "5. LOVELY cinema hall"<<endl;
+ cout<< "6. IUB"<<endl;
+ cout<<"Enter your destination: "<<endl;
+}
+int main()
+{
+ int choice,destination,counter=0;
+ string name;
+ FIREFLY();
+ cin>>choice;
+while(choice!=4){
+ switch(choice)
+ {
+ case 1:
+ if(counter<=0)
+ {
+ cout<<"Enter your name: ";
+ cin>>name;
+ FIREFLY_booking();
+ cin>>destination;
+ cout<<"Your uber is booked successfully.It will be arriving soon "<<endl;
+ counter++;
+ }
+ else{
+ cout<<"You have already booked an uber"<<endl;
+ cout<<"Cancel your uber to book another one"<<endl;
+ }
+ break;
+ case 2:
+ if(counter>0){
+ cout<<"Booking is done"<<endl;
+ cout<<"Arrival will be less than 2 minutes"<<endl;
+ }
+ else{
+ cout<<"Booking is not done yet"<<endl;
+ cout<<" book an uber first"<<endl; }
+ break;
+ case 3:
+ if(counter>0){
+ cout<< "Your uber is cancelled"<<endl;
+ counter--;}
+ else{
+ cout<<"You have no uber to cancel"<<endl; 
+ cout<<"book an uber first"<<endl;
+ }
+ break;
+ }
+ FIREFLY();
+ cin>>choice;
+}
+ cout<<"Thank you for using our FIREFLY booking service "<<endl;
+ cout<<"Have a good one"<<endl;
+return 0;
+}
