@@ -1,7 +1,7 @@
 #include <iostream>
 #include <bitset>
 #include <sstream>
-using namespace std;
+using namespace std; 
 int binarytoDecimal(string x){
 int decimal= stoi(x,nullptr,2);
 cout<<"The decimal = "<<decimal<<endl;
