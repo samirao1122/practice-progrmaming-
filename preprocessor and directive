@@ -1,0 +1,37 @@
+#include<iostream>
+#define ABS(num) (num<5?-num:num)
+using namespace std;
+int main(){
+cout<<ABS(2)<<endl;
+    cout<<ABS(2)+3<<endl;
+}
+..........................................................................
+#include<iostream>
+# define size 
+using namespace std;
+int main(){
+for (int i=0;i<size;i++){
+     cout<<i<<endl;
+}
+}
+..............................................................................
+#include<iostream>
+using namespace std;
+
+#define window 1
+#define mac 3
+#define os mac
+
+int main() {
+#ifdef os
+#if os==mac
+cout<<"yes is window "<<endl;
+#else 
+cout<<"not is window"<<endl;
+#endif
+#else
+cout<<"not eligible for window"<<endl;
+#endif
+    return 0;
+}
+....................................................................................
