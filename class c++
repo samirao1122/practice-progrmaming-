@@ -1,0 +1,42 @@
+  #include<iostream>
+ using namespace std;
+class Employee
+{
+public:
+  string  name;
+
+
+   void slary( );
+   void get_known();
+
+};
+
+void Employee:: slary ( )
+{
+    cout<<"saLARTY"<<endl;
+} 
+ void Employee::get_known(){
+    cout<<"institute name "<<endl;
+ }
+
+
+int main(){
+
+
+Employee e1;
+e1.name="ali";
+cout<<e1.name<<endl;
+e1.get_known();
+
+Employee *e;
+e=&e1;
+cout<<e<<endl;
+
+Employee *p=nullptr;
+p= new Employee;
+  
+//(*p).name=p->name;
+p->name="usma naz";
+  cout<<p->name<<endl;
+
+}
