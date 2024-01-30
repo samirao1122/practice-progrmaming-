@@ -1,0 +1,51 @@
+#include<iostream>
+using namespace std;
+class student 
+{
+public:
+  int roll_num;
+  string name;
+  int id;
+
+
+void sign_in  ( );//simple functoon calling 
+   student ();//constructor 
+student (int roll_num);//constructor
+~student();//destructor 
+   
+};
+
+  student ::student (){
+
+     roll_num= 1000;
+
+    cout<<"emplyee created"<<endl;
+    
+ }
+student::student (int roll_num)
+{
+this ->roll_num=roll_num;
+  cout<<"e4 created"<<endl;
+  
+}
+student ::~student (){
+
+cout<<"instance now being deleted"<<endl;
+  
+}
+ int main()
+{
+student  e1;
+cout<<e1.roll_num<<endl;
+  e1.roll_num=1002;
+cout<<e1.id<<endl;
+  student e2;
+ 
+  student e3(7000);
+   cout<<e3.roll_num<<endl;
+
+
+  
+  return 0;
+  
+}
