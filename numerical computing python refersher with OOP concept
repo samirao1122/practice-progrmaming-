@@ -1,0 +1,34 @@
+d={1:"one",4:"two"}
+print(d[4])
+print(d.items())
+for v,k in d.items():
+    print(k,v)
+print(list(d.items()))
+print(dict(d.items()))
+a=[1,2,3,4,56,7]
+b=[0,99,8,7,6,5]
+print(dict(zip(a,b)))
+print(list(zip(a,b)))
+
+class Point:
+    def __init__(self,x,y):
+        self.x=x
+        self.y=y
+    def __str__(self):
+        return ("value of x is :"+str(self.x)+" "+"value of y is :"+str(self.y)+"multiply result is "+str(self.x*self.y))
+
+
+class Shape:
+    def __init__(self,points):
+        self.points=points
+    def __str__(self):
+        ret=" "
+        for i in self.points:
+            ret+=str(i)+"_"
+        return ret
+p1=Point(2,3)
+p2=Point(3,4)
+p3=Point(4,5)
+p=[p1,p2,p3]
+sh=Shape(p)
+print(sh)
