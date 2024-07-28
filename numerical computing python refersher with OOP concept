@@ -32,3 +32,22 @@ p3=Point(4,5)
 p=[p1,p2,p3]
 sh=Shape(p)
 print(sh)
+
+class Rectangle:
+    def __init__(self,length,width):
+        self.length=length
+        self.width=width
+    def area(self):
+        return (self.length*self.width)
+    def __str__(self):
+        return ("L:"+str(self.length)+" "+"W:"+str(self.width))
+r1=Rectangle(2,3)
+print(r1)
+class Shape(Rectangle):
+    def __init__(self,length):
+        super().__init__(length,length)
+    def __str__(self):
+        return  "square"+super().__str__()
+sh=Shape(3)
+print(sh)
+print(sh.area())
